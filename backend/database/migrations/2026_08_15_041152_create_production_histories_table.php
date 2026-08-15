@@ -28,16 +28,17 @@ return new class extends Migration
                 'qc',
                 'finishing',
                 'packing',
-                'completed'
             ]);
 
-            $table->unsignedInteger('quantity')->default(0);
+            $table->unsignedInteger('quantity');
+
             $table->unsignedInteger('good_quantity')->default(0);
+
             $table->unsignedInteger('reject_quantity')->default(0);
 
             $table->enum('action', [
                 'process',
-                'rework'
+                'rework',
             ])->default('process');
 
             $table->text('notes')->nullable();
