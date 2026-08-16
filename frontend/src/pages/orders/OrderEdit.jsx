@@ -40,11 +40,11 @@ export default function OrderEdit() {
                 ]);
 
                 setCustomers(
-                    customerResponse.data?.data ?? []
+                    customerResponse.data ?? []
                 );
 
                 setProducts(
-                    productResponse.data?.data ?? []
+                    productResponse.data ?? []
                 );
 
                 const orderData =
@@ -54,7 +54,7 @@ export default function OrderEdit() {
 
                 setForm({
                     customer_id:
-                        orderData.customer_id ?? "",
+    orderData.customer?.id ?? "",
                     order_date:
                         orderData.order_date ?? "",
                     deadline:

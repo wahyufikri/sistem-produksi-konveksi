@@ -29,7 +29,7 @@ export default function OrderList() {
                 });
 
             setOrders(
-                response.data?.data ?? []
+                response.data ?? []
             );
         } catch (error) {
             console.error(error);

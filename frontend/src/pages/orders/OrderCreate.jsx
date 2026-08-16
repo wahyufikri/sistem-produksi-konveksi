@@ -49,11 +49,11 @@ export default function OrderCreate() {
                 ]);
 
                 setCustomers(
-                    customerResponse.data?.data ?? []
+                    customerResponse.data ?? []
                 );
 
                 setProducts(
-                    productResponse.data?.data ?? []
+                    productResponse.data ?? []
                 );
             } catch (error) {
                 console.error(error);

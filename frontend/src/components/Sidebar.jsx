@@ -18,7 +18,7 @@ export default function Sidebar() {
         <aside className="w-64 min-h-screen bg-white border-r">
 
             <div className="p-5 border-b">
-                <h1 className="text-xl font-bold">
+                <h1 className="text-xl font-bold text-gray-500">
                     Sistem Produksi
                 </h1>
 

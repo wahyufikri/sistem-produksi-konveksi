@@ -1,0 +1,31 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        DB::statement("
+            ALTER TABLE production_histories
+            MODIFY action
+            ENUM('process', 'send_to_rework', 'process_rework')
+            NOT NULL
+            DEFAULT 'process'
+        ");
+    }
+
+    public function down(): void
+    {
+        DB::statement("
+            ALTER TABLE production_histories
+            MODIFY action
+            ENUM('process', 'rework')
+            NOT NULL
+            DEFAULT 'process'
+        ");
+    }
+};

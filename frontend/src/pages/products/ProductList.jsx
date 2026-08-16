@@ -22,7 +22,7 @@ export default function ProductList() {
                 });
 
             setProducts(
-                response.data?.data ?? []
+                response.data ?? []
             );
         } catch (error) {
             console.error(error);

@@ -26,7 +26,7 @@ export default function CustomerList() {
              * response.data.data
              */
             setCustomers(
-                response.data?.data ?? []
+                response.data ?? []
             );
 
         } catch (error) {

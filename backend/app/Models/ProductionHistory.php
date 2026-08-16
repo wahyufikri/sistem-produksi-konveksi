@@ -10,18 +10,19 @@ class ProductionHistory extends Model
     protected $table = 'production_histories';
 
     protected $fillable = [
-        'order_item_id',
-        'created_by',
-        'type',
-        'stage',
-        'from_stage',
-        'to_stage',
-        'quantity',
-        'good_quantity',
-        'reject_quantity',
-        'notes',
-        'processed_at',
-    ];
+    'order_item_id',
+    'created_by',
+    'type',
+    'stage',
+    'from_stage',
+    'to_stage',
+    'quantity',
+    'good_quantity',
+    'reject_quantity',
+    'action',
+    'notes',
+    'processed_at',
+];
 
     protected $casts = [
         'processed_at' => 'datetime',

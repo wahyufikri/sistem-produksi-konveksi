@@ -117,6 +117,10 @@ Route::middleware('role:production')->group(function () {
         '/production/order-items/{orderItem}',
         [ProductionController::class, 'update']
     );
+    Route::post(
+    '/production/order-items/{orderItem}/rework/process',
+    [ProductionController::class, 'processRework']
+);
 
 });
 });

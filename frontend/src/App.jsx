@@ -8,6 +8,8 @@ import {
 import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ProductionList from "./pages/production/ProductionList";
+import ProductionDetail from "./pages/production/ProductionDetail";
+import ProductionHistory from "./pages/production/ProductionHistory";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 import RoleRoute from "./components/RoleRoute";
@@ -24,6 +26,7 @@ import OrderList from "./pages/orders/OrderList";
 import OrderCreate from "./pages/orders/OrderCreate";
 import OrderDetail from "./pages/orders/OrderDetail";
 import OrderEdit from "./pages/orders/OrderEdit";
+
 
 function App() {
     return (
@@ -222,6 +225,30 @@ function App() {
             <RoleRoute role="admin">
                 <DashboardLayout>
                     <OrderEdit />
+                </DashboardLayout>
+            </RoleRoute>
+        </ProtectedRoute>
+    }
+/>
+<Route
+    path="/production/order-items/:orderItemId"
+    element={
+        <ProtectedRoute>
+            <RoleRoute role="production">
+                <DashboardLayout>
+                    <ProductionDetail />
+                </DashboardLayout>
+            </RoleRoute>
+        </ProtectedRoute>
+    }
+/>
+<Route
+    path="/production/order-items/:orderItemId/history"
+    element={
+        <ProtectedRoute>
+            <RoleRoute role="production">
+                <DashboardLayout>
+                    <ProductionHistory />
                 </DashboardLayout>
             </RoleRoute>
         </ProtectedRoute>
